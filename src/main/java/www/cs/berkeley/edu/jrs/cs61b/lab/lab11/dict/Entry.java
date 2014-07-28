@@ -1,6 +1,6 @@
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab11a.dict;
 /* Entry.java */
 
-package dict;
 
 /**
  *  A class for dictionary entries, which are (key, value) pairs.

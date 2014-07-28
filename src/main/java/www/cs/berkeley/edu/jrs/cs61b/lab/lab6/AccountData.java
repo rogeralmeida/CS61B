@@ -1,6 +1,7 @@
-/* AccountData.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab6;/* AccountData.java */
 
-import sortedlist.*;
+
+import www.cs.berkeley.edu.jrs.cs61b.lab.lab6.sortedlist.Keyable;
 
 /**
  *  Implements a customer's account profile for the virtual teller machine.

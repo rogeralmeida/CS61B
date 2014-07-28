@@ -1,4 +1,4 @@
-/* BadAccountException.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab6;/* BadAccountException.java */
 
 /**
  *  Implements an exception that should be thrown for nonexistent accounts.

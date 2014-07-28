@@ -1,7 +1,8 @@
-/* BankApp.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab6;/* BankApp.java */
 
-import java.io.*;
-import sortedlist.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  *  A bank application.  Allows a user to create and manipulate 
@@ -12,7 +13,7 @@ public class BankApp {
           new BufferedReader(new InputStreamReader(System.in));
   private VirtualTeller ATM = new VirtualTeller();
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     greeting();
     usage();
     BankApp bankApp = new BankApp();

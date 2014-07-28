@@ -1,6 +1,5 @@
-/* ListEnum.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab6.sortedlist;/* ListEnum.java */
 
-package sortedlist;
 
 import java.util.Enumeration;
 

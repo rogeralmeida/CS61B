@@ -1,6 +1,7 @@
-/*  VirtualTeller.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab6;/*  VirtualTeller.java */
 
-import sortedlist.*;
+
+import www.cs.berkeley.edu.jrs.cs61b.lab.lab6.sortedlist.SortedList;
 
 /**
  *  An implementation of a virtual automated teller machine.

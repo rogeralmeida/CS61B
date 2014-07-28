@@ -1,6 +1,6 @@
 /* SortedList.java */
 
-package sortedlist;
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab6.sortedlist;
 import java.util.Enumeration;
 
 /**

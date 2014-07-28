@@ -1,6 +1,9 @@
-/* BinaryTreeNode.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab11a.dict;
+/**
+ * BinaryTreeNode.java
+ * **/
 
-package dict;
+
 
 /**
  *  BinaryTreeNode represents a node in a binary tree.
