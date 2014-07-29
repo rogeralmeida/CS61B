@@ -1,4 +1,4 @@
-/* TestHelper.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab3;/* TestHelper.java */
 
 /**
  *  This class is based on code from Arnow/Dexter/Weiss.  Its verify() method

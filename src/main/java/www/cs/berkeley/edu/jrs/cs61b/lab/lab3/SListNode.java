@@ -1,4 +1,4 @@
-/* SListNode.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab3;/* SListNode.java */
 
 /**
  *  SListNode is a class used internally by the SList class.  An SList object
@@ -33,4 +33,8 @@ class SListNode {
     this.next = next;
   }
 
+    @Override
+    public String toString() {
+        return item.toString();
+    }
 }
