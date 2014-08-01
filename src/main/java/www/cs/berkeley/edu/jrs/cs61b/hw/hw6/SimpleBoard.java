@@ -1,4 +1,4 @@
-/* SimpleBoard.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw6;/* SimpleBoard.java */
 
 /**
  *  Simple class that implements an 8x8 game board with three possible values

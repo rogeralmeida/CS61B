@@ -1,5 +1,4 @@
-package www.cs.berkeley.edu.jrs.cs61b.lab.lab11a.dict;
-/**
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab11.dict; /**
  * BinaryTreeNode.java
  * **/
 

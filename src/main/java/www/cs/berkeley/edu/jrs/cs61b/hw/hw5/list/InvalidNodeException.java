@@ -1,6 +1,5 @@
-/* InvalidNodeException.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw5.list;/* InvalidNodeException.java */
 
-package list;
 
 /**
  *  Implements an Exception that signals an attempt to use an invalid ListNode.

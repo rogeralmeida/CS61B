@@ -1,6 +1,5 @@
-/* SplayTree.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab14.dict;/* SplayTree.java */
 
-package dict;
 
 /**
  *  SplayTree implements a Dictionary as a binary tree that is kept roughly

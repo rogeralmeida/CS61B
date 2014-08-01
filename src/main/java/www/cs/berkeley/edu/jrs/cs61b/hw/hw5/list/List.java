@@ -1,6 +1,5 @@
-/* List.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw5.list;/* List.java */
 
-package list;
 
 /**
  *  A List is a mutable list ADT.  No implementation is provided.

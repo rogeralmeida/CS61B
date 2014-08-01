@@ -1,6 +1,5 @@
-/* DList.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw5.list;/* DList.java */
 
-package list;
 
 /**
  *  A DList is a mutable doubly-linked list ADT.  Its implementation is

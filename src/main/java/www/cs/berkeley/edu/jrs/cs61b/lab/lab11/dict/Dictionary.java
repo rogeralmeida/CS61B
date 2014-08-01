@@ -1,6 +1,5 @@
-/* Dictionary.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab11.dict;/* Dictionary.java */
 
-package www.cs.berkeley.edu.jrs.cs61b.lab.lab11a.dict;
 
 /**
  *  An interface for (unordered) dictionary ADTs.

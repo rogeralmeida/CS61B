@@ -1,6 +1,5 @@
-/* WUGraph.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.pj3.graph;/* WUGraph.java */
 
-package graph;
 
 /**
  * The WUGraph class represents a weighted, undirected graph.  Self-edges are

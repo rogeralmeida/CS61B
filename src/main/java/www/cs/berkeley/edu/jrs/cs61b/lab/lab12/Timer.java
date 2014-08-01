@@ -1,4 +1,4 @@
-/* Timer.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab12;/* Timer.java */
 
 /**
  *  Implements a simple stopwatch/timer class based on wall-clock time.

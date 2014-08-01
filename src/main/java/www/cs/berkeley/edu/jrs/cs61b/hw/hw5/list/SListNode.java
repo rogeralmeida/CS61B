@@ -1,6 +1,5 @@
-/* SListNode.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw5.list;/* SListNode.java */
 
-package list;
 
 /**
  *  An SListNode is a mutable node in an SList (singly-linked list).

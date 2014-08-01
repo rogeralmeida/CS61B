@@ -1,6 +1,5 @@
-/* Dictionary.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab14.dict;/* Dictionary.java */
 
-package dict;
 
 /**
  *  An interface for dictionary ADTs.

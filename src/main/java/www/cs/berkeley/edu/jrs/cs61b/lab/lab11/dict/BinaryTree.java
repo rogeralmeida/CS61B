@@ -1,6 +1,5 @@
-/* BinaryTree.java */
+package www.cs.berkeley.edu.jrs.cs61b.lab.lab11.dict;/* BinaryTree.java */
 
-package dict;
 
 /**
  *  BinaryTree implements a Dictionary as a binary tree (unbalanced).  Multiple

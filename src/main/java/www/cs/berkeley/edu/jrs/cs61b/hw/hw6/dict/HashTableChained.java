@@ -1,6 +1,5 @@
-/* HashTableChained.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw6.dict;/* HashTableChained.java */
 
-package dict;
 
 /**
  *  HashTableChained implements a Dictionary as a hash table with chaining.

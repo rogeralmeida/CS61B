@@ -1,6 +1,5 @@
-/* Entry.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw6.dict;/* Entry.java */
 
-package dict;
 
 /**
  *  A class for dictionary entries.

@@ -1,6 +1,6 @@
-/* Homework6Test.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw6;/* Homework6Test.java */
 
-import dict.*;
+import www.cs.berkeley.edu.jrs.cs61b.hw.hw6.dict.HashTableChained;
 
 /**
  *  Initializes a hash table, then stocks it with random SimpleBoards.

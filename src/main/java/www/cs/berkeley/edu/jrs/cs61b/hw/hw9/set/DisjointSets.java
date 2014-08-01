@@ -1,6 +1,5 @@
-/* DisjointSets.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw9.set;/* DisjointSets.java */
 
-package set;
 
 /**
  *  A disjoint sets ADT.  Performs union-by-size and path compression.
