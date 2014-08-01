@@ -1,8 +1,9 @@
-/* Date.java */
-
-import java.io.*;
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw2;/* Date.java */
 
 class Date {
+    private final int month;
+    private final int day;
+    private final int year;
 
   /* Put your private data fields here. */
 
@@ -13,7 +14,9 @@ class Date {
    *  @param year is the year in question, with no digits omitted.
    */
   public Date(int month, int day, int year) {
-
+      this.month = month;
+      this.day = day;
+      this.year = year;
   }
 
   /** Constructs a Date object corresponding to the given string.
@@ -23,7 +26,10 @@ class Date {
    *  a valid date, the program halts with an error message.
    */
   public Date(String s) {
-
+      String[] strings  = s.split("/");
+      this.month        = Integer.parseInt(strings[0]);
+      this.day          = Integer.parseInt(strings[1]);
+      this.year         = Integer.parseInt(strings[2]);
   }
 
   /** Checks whether the given year is a leap year.
@@ -57,7 +63,7 @@ class Date {
    *  @return a String representation of this date.
    */
   public String toString() {
-    return "stuff";                     // replace this line with your solution
+    return String.format("%02d/%02d/%4d", this.month, this.day, this.year);                     // replace this line with your solution
   }
 
   /** Determines whether this Date is before the Date d.
