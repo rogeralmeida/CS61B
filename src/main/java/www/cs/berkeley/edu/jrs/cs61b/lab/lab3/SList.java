@@ -11,6 +11,7 @@ package www.cs.berkeley.edu.jrs.cs61b.lab.lab3;/* SList.java */
 public class SList {
 
     private SListNode head;
+    private SListNode tail;
     private int size;
 
     /**
@@ -20,6 +21,7 @@ public class SList {
     public SList() {
         size = 0;
         head = null;
+        tail = null;
     }
 
     /**
@@ -40,6 +42,14 @@ public class SList {
         return size;
     }
 
+    public SListNode getTail() {
+        return tail;
+    }
+
+    public SListNode getHead() {
+        return head;
+    }
+
     /**
      *  insertFront() inserts item "obj" at the beginning of this list.
      *  @param obj the item to be inserted.
@@ -47,6 +57,9 @@ public class SList {
 
     public void insertFront(Object obj) {
         head = new SListNode(obj, head);
+        if (tail == null){
+            tail = head;
+        }
         size++;
     }
 
@@ -58,12 +71,10 @@ public class SList {
     public void insertEnd(Object obj) {
         if (head == null) {
             head = new SListNode(obj);
+            tail = head;
         } else {
-            SListNode node = head;
-            while (node.next != null) {
-                node = node.next;
-            }
-            node.next = new SListNode(obj);
+            tail.next = new SListNode(obj);
+            tail = tail.next;
         }
         size++;
     }
