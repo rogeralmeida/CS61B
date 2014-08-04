@@ -105,10 +105,13 @@ class Date {
   /** Determines the difference in days between d and this Date.  For example,
    *  if this Date is 12/15/2012 and d is 12/14/2012, the difference is 1.
    *  If this Date occurs before d, the result is negative.
+   *  Clever solution came from: http://mathforum.org/library/drmath/view/66535.html
    *  @return the difference in days between d and this date.
    */
   public int difference(Date d) {
-    return 0;                           // replace this line with your solution
+    int thisDate = (int) Math.floor(365*year + year/4 - year/100 + year/400 + day + (153*month+8)/5);
+    int thatDate = (int) Math.floor(365 * d.year + d.year / 4 - d.year / 100 + d.year / 400 + d.day + (153 * d.month + 8) / 5);
+    return thisDate - thatDate;
   }
 
   public static void main(String[] argv) {

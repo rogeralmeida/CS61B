@@ -74,5 +74,11 @@ public class DateTest {
         Assert.assertThat(new Date(12, 31, 2016).dayInYear(), is(366));
 
     }
+
+    @Test
+    public void testDifferenceBetweenDates() throws Exception {
+        Assert.assertThat(new Date(01, 01, 2013).difference(new Date(01, 31, 2013)), is(30));
+        Assert.assertThat(new Date(01, 01, 2014).difference(new Date(01, 31, 2010)), is(-1431));
+    }
 }
 
