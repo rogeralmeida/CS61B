@@ -36,6 +36,13 @@ class Date {
    *  @return true if and only if the input year is a leap year.
    */
   public static boolean isLeapYear(int year) {
+    if (year % 4 != 0){
+        return false;
+    } else if (year % 100 != 0 ){
+        return true;
+    } else if (year % 400 != 0){
+        return false;
+    }
     return true;                        // replace this line with your solution
   }
 
@@ -43,9 +50,11 @@ class Date {
    *  @param month is a month, numbered in the range 1...12.
    *  @param year is the year in question, with no digits omitted.
    *  @return the number of days in the given month.
+   *  This clever solution came from: http://www.dispersiondesign.com/articles/time/number_of_days_in_a_month
    */
   public static int daysInMonth(int month, int year) {
-    return 0;                           // replace this line with your solution
+    return 31 - ((month == 2) ? (3 - (isLeapYear(year)? 1:0)) : ((month - 1) % 7 % 2));// replace this line with your solution
+
   }
 
   /** Checks whether the given date is valid.
@@ -54,7 +63,7 @@ class Date {
    *  Years prior to A.D. 1 are NOT valid.
    */
   public static boolean isValidDate(int month, int day, int year) {
-    return true;                        // replace this line with your solution
+    return (day >= 1 && day <= Date.daysInMonth(month, year)) && (month >= 1 && month <= 12) && year > 0;
   }
 
   /** Returns a string representation of this date in the form month/day/year.
