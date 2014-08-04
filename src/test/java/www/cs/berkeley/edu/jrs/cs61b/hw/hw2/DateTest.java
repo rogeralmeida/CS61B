@@ -52,7 +52,19 @@ public class DateTest {
         Assert.assertTrue(Date.isValidDate(02, 29, 2016));
         Assert.assertTrue(Date.isValidDate(01, 29, 2016));
         Assert.assertTrue(Date.isValidDate(8, 31, 2016));
+    }
 
+
+    @Test
+    public void testBeforeDate() throws Exception {
+        Assert.assertTrue(new Date(04, 20, 1990).isBefore(new Date(04, 20, 1992)));
+        Assert.assertFalse(new Date(04, 20, 1990).isBefore(new Date(05, 20, 1980)));
+    }
+
+    @Test
+    public void testAfterDate() throws Exception {
+        Assert.assertTrue(new Date(01, 31, 2012).isAfter(new Date(12, 31, 2011)));
+        Assert.assertFalse(new Date(01, 31, 2012).isAfter(new Date(02, 01, 2012)));
     }
 }
 

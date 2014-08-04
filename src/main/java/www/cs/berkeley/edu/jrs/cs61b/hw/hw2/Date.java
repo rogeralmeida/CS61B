@@ -79,14 +79,18 @@ class Date {
    *  @return true if and only if this Date is before d. 
    */
   public boolean isBefore(Date d) {
-    return true;                        // replace this line with your solution
+      int thisDate = Integer.parseInt(String.format("%4d%02d%02d", this.year, this.month, this.day));
+      int thatDate = Integer.parseInt(String.format("%4d%02d%02d", d.year, d.month, day));
+      return  thisDate < thatDate;
   }
 
   /** Determines whether this Date is after the Date d.
    *  @return true if and only if this Date is after d. 
    */
   public boolean isAfter(Date d) {
-    return true;                        // replace this line with your solution
+      int thisDate = Integer.parseInt(String.format("%4d%02d%02d", this.year, this.month, this.day));
+      int thatDate = Integer.parseInt(String.format("%4d%02d%02d", d.year, d.month, day));
+      return  thisDate > thatDate;
   }
 
   /** Returns the number of this Date in the year.
