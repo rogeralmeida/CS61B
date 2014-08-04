@@ -99,7 +99,7 @@ class Date {
    *  year.)
    */
   public int dayInYear() {
-    return 0;                           // replace this line with your solution
+    return (367 * month - 362) / 12 + this.day - ((month > 2) ? (2 - (Date.isLeapYear(this.year)? 1:0)) : 0);// replace this line with your solution
   }
 
   /** Determines the difference in days between d and this Date.  For example,

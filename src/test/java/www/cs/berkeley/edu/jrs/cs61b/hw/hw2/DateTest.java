@@ -66,5 +66,13 @@ public class DateTest {
         Assert.assertTrue(new Date(01, 31, 2012).isAfter(new Date(12, 31, 2011)));
         Assert.assertFalse(new Date(01, 31, 2012).isAfter(new Date(02, 01, 2012)));
     }
+
+    @Test
+    public void testDayInYear() throws Exception {
+        Assert.assertThat(new Date(01, 01, 2010).dayInYear(), is(1));
+        Assert.assertThat(new Date(06, 15, 2011).dayInYear(), is(166));
+        Assert.assertThat(new Date(12, 31, 2016).dayInYear(), is(366));
+
+    }
 }
 
