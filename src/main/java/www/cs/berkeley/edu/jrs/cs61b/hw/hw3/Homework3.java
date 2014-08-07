@@ -1,4 +1,4 @@
-/* Homework3.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw3;/* Homework3.java */
 
 public class Homework3 {
 
@@ -19,6 +19,26 @@ public class Homework3 {
    **/
 
   public static void smoosh(int[] ints) {
+      /**
+       * I'm really not happy with this solution.
+       * Too many loops to do a simple dumb thing
+       */
+    int i = 0;
+    int end = ints.length;
+    while (i < end){
+        int pos = i+1;
+        int j = i+1;
+        while(j < ints.length && ints[j++] == ints[i++]){}
+        int target = j-1;
+        //TODO System.arraycopy() should simplify things here
+        while(target < ints.length) {
+            ints[pos++] = ints[target++];
+        }
+        end -= (target - pos);
+    }
+    for (int j = end; j < ints.length; j++){
+        ints[j] = -1;
+    }
     // Fill in your solution here.  (Ours is twelve lines long, not counting
     // blank lines or lines already present in this file.)
   }

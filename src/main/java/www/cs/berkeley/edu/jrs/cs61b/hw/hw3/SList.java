@@ -1,4 +1,4 @@
-/* SList.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw3;/* SList.java */
 
 /**
  *  The SList class is a singly-linked implementation of the linked list

@@ -1,4 +1,4 @@
-/* TestHelper.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw3;/* TestHelper.java */
 
 /**
  *  The purpose of this class is to provide a shorthand for writing and testing

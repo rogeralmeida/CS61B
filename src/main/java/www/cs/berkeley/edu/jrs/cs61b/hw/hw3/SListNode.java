@@ -1,4 +1,4 @@
-/* SListNode.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.hw3;/* SListNode.java */
 
 /**
  *  SListNode is a class used internally by the SList class.  An SList object
