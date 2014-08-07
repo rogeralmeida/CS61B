@@ -33,4 +33,16 @@ public class SListTest {
         Assert.assertThat(sList.toString(), is("[  0  1  0  3  1  0  ]"));
 
     }
+
+    @Test
+    public void testTwins() throws Exception {
+        SList sList = new SList();
+        sList.insertEnd(3);
+        sList.insertEnd(7);
+        sList.insertEnd(4);
+        sList.insertEnd(2);
+        sList.insertEnd(2);
+        sList.twin();
+        Assert.assertThat(sList.toString(), is("[  3  3  7  7  4  4  2  2  2  2  ]"));
+    }
 }

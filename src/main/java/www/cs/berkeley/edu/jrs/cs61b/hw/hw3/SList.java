@@ -140,9 +140,20 @@ public class SList {
 
   public void twin() {
     // Fill in your solution here.  (Ours is seven lines long.)
+      /**
+       * I would like to see their solution. Maybe they didn't used recursion.
+       */
+    duplicateNodes(this.head);
   }
 
-  /**
+    private void duplicateNodes(SListNode node) {
+        node.next = new SListNode(node.item, node.next);
+        if(node.next.next != null) {
+            duplicateNodes(node.next.next);
+        }
+    }
+
+    /**
    *  toString() converts the list to a String.
    *  @return a String representation of the list.
    **/
