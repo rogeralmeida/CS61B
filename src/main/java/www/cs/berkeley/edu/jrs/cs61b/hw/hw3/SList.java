@@ -111,10 +111,23 @@ public class SList {
    **/
 
   public void squish() {
+    this.head = removeDuplicated(this.head);
     // Fill in your solution here.  (Ours is eleven lines long.)
   }
 
-  /**
+    private SListNode removeDuplicated(SListNode node) {
+        if(node.next != null){
+            if (node.next.item.equals(node.item)) {
+                node.next = node.next.next;
+                node = removeDuplicated(node);
+            } else {
+                node.next = removeDuplicated(node.next);
+            }
+        }
+        return node;
+    }
+
+    /**
    *  twin() takes this list and doubles its length by replacing each node
    *  with two consecutive nodes referencing the same item.
    *
