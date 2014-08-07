@@ -20,20 +20,22 @@ public class Homework3 {
 
   public static void smoosh(int[] ints) {
       /**
-       * I'm really not happy with this solution.
+       * I still not happy with this solution.
        * Too many loops to do a simple dumb thing
        */
     int i = 0;
     int end = ints.length;
     while (i < end){
+        int anInt = ints[i];
         int pos = i+1;
         int j = i+1;
-        while(j < ints.length && ints[j++] == ints[i++]){}
+        while(j < ints.length && ints[j++] == anInt){}
         int target = j-1;
         //TODO System.arraycopy() should simplify things here
         while(target < ints.length) {
             ints[pos++] = ints[target++];
         }
+        i++;
         end -= (target - pos);
     }
     for (int j = end; j < ints.length; j++){
