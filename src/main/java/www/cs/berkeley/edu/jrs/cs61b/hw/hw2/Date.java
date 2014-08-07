@@ -111,7 +111,7 @@ class Date {
   public int difference(Date d) {
     int thisDate = (int) Math.floor(365*year + year/4 - year/100 + year/400 + day + (153*month+8)/5);
     int thatDate = (int) Math.floor(365 * d.year + d.year / 4 - d.year / 100 + d.year / 400 + d.day + (153 * d.month + 8) / 5);
-    return thisDate - thatDate;
+    return thatDate - thisDate;
   }
 
   public static void main(String[] argv) {
