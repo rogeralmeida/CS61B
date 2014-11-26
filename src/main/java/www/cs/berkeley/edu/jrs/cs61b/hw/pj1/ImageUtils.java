@@ -1,4 +1,4 @@
-/* ImageUtils.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.pj1;/* ImageUtils.java */
 
 /* DO NOT CHANGE THIS FILE. */
 /* YOUR SUBMISSION MUST WORK CORRECTLY WITH _OUR_ COPY OF THIS FILE. */
@@ -60,7 +60,7 @@ public class ImageUtils {
    *  @param pImage the image to convert.
    *  @return a BufferedImage with the same pixels as the PixImage.
    */
-  static BufferedImage pixImage2buffer(PixImage pImage) {
+  public static BufferedImage pixImage2buffer(PixImage pImage) {
     BufferedImage bImage = new BufferedImage(pImage.getWidth(),
                                              pImage.getHeight(),
                                              BufferedImage.TYPE_INT_ARGB);

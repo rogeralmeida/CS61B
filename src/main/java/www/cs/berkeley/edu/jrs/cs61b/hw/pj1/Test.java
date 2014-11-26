@@ -7,6 +7,11 @@
  *  @author Jonathan Shewchuk and Joel Galenson
  */
 
+import www.cs.berkeley.edu.jrs.cs61b.hw.pj1.ImageUtils;
+import www.cs.berkeley.edu.jrs.cs61b.hw.pj1.PixImage;
+import www.cs.berkeley.edu.jrs.cs61b.hw.pj1.RunIterator;
+import www.cs.berkeley.edu.jrs.cs61b.hw.pj1.RunLengthEncoding;
+
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;

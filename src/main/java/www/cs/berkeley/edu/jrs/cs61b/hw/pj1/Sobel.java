@@ -1,4 +1,4 @@
-/* Sobel.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.pj1;/* Sobel.java */
 
 /* DO NOT CHANGE THIS FILE. */
 /* YOUR SUBMISSION MUST WORK CORRECTLY WITH _OUR_ COPY OF THIS FILE. */

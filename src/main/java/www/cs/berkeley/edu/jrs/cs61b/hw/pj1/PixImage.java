@@ -1,4 +1,4 @@
-/* PixImage.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.pj1;/* PixImage.java */
 
 /**
  *  The PixImage class represents an image, which is a rectangular grid of
@@ -16,8 +16,11 @@
  */
 
 public class PixImage {
+    private final int width;
+    private final int height;
+    private final Pixel[][] pixels;
 
-  /**
+    /**
    *  Define any variables associated with a PixImage object here.  These
    *  variables MUST be private.
    */
@@ -33,17 +36,27 @@ public class PixImage {
    * @param height the height of the image.
    */
   public PixImage(int width, int height) {
-    // Your solution here.
+      this.width = width;
+      this.height = height;
+      this.pixels = new Pixel[height][width];
+      initializePixels(width, height);
   }
 
-  /**
+    private void initializePixels(int width, int height) {
+        for (int x = 0; x < height; x++) {
+            for (int y = 0; y < width; y++) {
+                pixels[x][y] = new Pixel((short) 0, (short) 0, (short) 0);
+            }
+        }
+    }
+
+    /**
    * getWidth() returns the width of the image.
    *
    * @return the width of the image.
    */
   public int getWidth() {
-    // Replace the following line with your solution.
-    return 1;
+    return this.width;
   }
 
   /**
@@ -52,8 +65,7 @@ public class PixImage {
    * @return the height of the image.
    */
   public int getHeight() {
-    // Replace the following line with your solution.
-    return 1;
+    return this.height;
   }
 
   /**
@@ -64,8 +76,7 @@ public class PixImage {
    * @return the red intensity of the pixel at coordinate (x, y).
    */
   public short getRed(int x, int y) {
-    // Replace the following line with your solution.
-    return 0;
+    return this.pixels[x][y].getRed();
   }
 
   /**
@@ -76,8 +87,7 @@ public class PixImage {
    * @return the green intensity of the pixel at coordinate (x, y).
    */
   public short getGreen(int x, int y) {
-    // Replace the following line with your solution.
-    return 0;
+    return this.pixels[x][y].getGreen();
   }
 
   /**
@@ -88,8 +98,7 @@ public class PixImage {
    * @return the blue intensity of the pixel at coordinate (x, y).
    */
   public short getBlue(int x, int y) {
-    // Replace the following line with your solution.
-    return 0;
+    return this.pixels[x][y].getBlue();
   }
 
   /**
@@ -106,7 +115,7 @@ public class PixImage {
    * @param blue the new blue intensity for the pixel at coordinate (x, y).
    */
   public void setPixel(int x, int y, short red, short green, short blue) {
-    // Your solution here.
+      this.pixels[x][y] = new Pixel(red, green, blue);
   }
 
   /**
@@ -153,9 +162,31 @@ public class PixImage {
    * @return a blurred version of "this" PixImage.
    */
   public PixImage boxBlur(int numIterations) {
-    // Replace the following line with your solution.
-    return this;
+      PixImage pixImage = new PixImage(this.width, this.height);
+      for (int i = 0; i < this.height; i++) {
+          for (int j = 0; j < this.width; j++) {
+              Pixel pixelBlur = pixelBlur(i, j);
+              pixImage.setPixel(i, j, pixelBlur.getRed(), pixelBlur.getGreen(), pixelBlur.getBlue());
+          }
+      }
+      return pixImage;
   }
+
+    public Pixel pixelBlur(int row, int column){
+        int greenSum = 0;
+        int redSum = 0;
+        int blueSum = 0;
+        int iterations = 0;
+        for (int x = row == 0 ? row : row - 1; x <= (row == height - 1 ? row : row + 1); x++) {
+            for (int y = column  == 0 ? column : column - 1; y <= (column == width - 1 ? column : column + 1); y++) {
+                greenSum += getGreen(x, y);
+                blueSum+= getBlue(x, y);
+                redSum += getRed(x, y);
+                iterations++;
+            }
+        }
+        return new Pixel((short) (redSum/iterations), (short) (greenSum/iterations), (short) (blueSum/iterations));
+    }
 
   /**
    * mag2gray() maps an energy (squared vector magnitude) in the range

@@ -1,4 +1,4 @@
-/* TIFFEncoder.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.pj1;/* TIFFEncoder.java */
 
 /* DO NOT CHANGE THIS FILE. */
 /* YOUR SUBMISSION MUST WORK CORRECTLY WITH _OUR_ COPY OF THIS FILE. */
@@ -16,6 +16,8 @@
  *
  *  @author Joel Galenson
  **/
+
+import www.cs.berkeley.edu.jrs.cs61b.hw.pj1.PixImage;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-/* RunLengthEncoding.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.pj1;/* RunLengthEncoding.java */
 
 /**
  *  The RunLengthEncoding class defines an object that run-length encodes
@@ -20,6 +20,8 @@
  *
  *  See the README file accompanying this project for additional details.
  */
+
+import www.cs.berkeley.edu.jrs.cs61b.hw.pj1.PixImage;
 
 import java.util.Iterator;
 

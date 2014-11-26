@@ -1,4 +1,4 @@
-/* RunIterator.java */
+package www.cs.berkeley.edu.jrs.cs61b.hw.pj1;/* RunIterator.java */
 
 /**
  *  The RunIterator class iterates over a RunLengthEncoding and allows other
