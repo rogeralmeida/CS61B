@@ -172,7 +172,7 @@ public class PixImage {
               pixImage.setPixel(i, j, pixelBlur.getRed(), pixelBlur.getGreen(), pixelBlur.getBlue());
           }
       }
-      return pixImage;
+      return pixImage.boxBlur(--numIterations);
   }
 
     public Pixel pixelBlur(int row, int column){

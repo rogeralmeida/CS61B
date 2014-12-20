@@ -44,14 +44,7 @@ public class PixImageTest {
 
     @Test
     public void boxBlur_ShouldReturnBrandNewPixImage_whenBlurWithOneIterationIt() throws Exception {
-        PixImage pixImage = new PixImage(3, 3);
-        short color = 10;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                pixImage.setPixel(i, j, color, color, color);
-                color += (short) 10;
-            }
-        }
+        PixImage pixImage = buildSequentialPixelImage();
         PixImage newPixImage = pixImage.boxBlur(1);
         assertThat(newPixImage.getRed(0, 0), equalTo((short) 30));
         assertThat(newPixImage.getRed(0, 1), equalTo((short) 35));
@@ -62,5 +55,32 @@ public class PixImageTest {
         assertThat(newPixImage.getBlue(2, 0), equalTo((short) 60));
         assertThat(newPixImage.getBlue(2, 1), equalTo((short) 65));
         assertThat(newPixImage.getBlue(2, 2), equalTo((short) 70));
+    }
+
+    @Test
+    public void boxBlur_shouldApplyManyTimes_whenNumberOfIterationsIsGreaterThanZero() {
+        PixImage pixImage = buildSequentialPixelImage();
+        PixImage newPixImage = pixImage.boxBlur(2);
+        assertThat(newPixImage.getRed(0, 0), equalTo((short) 40));
+        assertThat(newPixImage.getRed(0, 1), equalTo((short) 42));
+        assertThat(newPixImage.getRed(0, 2), equalTo((short) 45));
+        assertThat(newPixImage.getGreen(1, 0), equalTo((short) 47));
+        assertThat(newPixImage.getGreen(1, 1), equalTo((short) 50));
+        assertThat(newPixImage.getGreen(1, 2), equalTo((short) 52));
+        assertThat(newPixImage.getBlue(2, 0), equalTo((short) 55));
+        assertThat(newPixImage.getBlue(2, 1), equalTo((short) 57));
+        assertThat(newPixImage.getBlue(2, 2), equalTo((short) 60));
+    }
+
+    private PixImage buildSequentialPixelImage() {
+        PixImage pixImage = new PixImage(3, 3);
+        short color = 10;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                pixImage.setPixel(i, j, color, color, color);
+                color += (short) 10;
+            }
+        }
+        return pixImage;
     }
 }
