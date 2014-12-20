@@ -3,6 +3,7 @@ package www.cs.berkeley.edu.jrs.cs61b.hw.pj1;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class PixImageTest {
@@ -35,7 +36,14 @@ public class PixImageTest {
     }
 
     @Test
-    public void whenBlurWithOneIterationItShouldReturnBrandNewPixImage() throws Exception {
+    public void boxBlur_shouldReturnThisIfNumberOfIterationsIsZeroOrLess() {
+        PixImage pixImage = new PixImage(5, 5);
+        assertThat(pixImage, is(pixImage.boxBlur(0)));
+        assertThat(pixImage, is(pixImage.boxBlur(-8)));
+    }
+
+    @Test
+    public void boxBlur_ShouldReturnBrandNewPixImage_whenBlurWithOneIterationIt() throws Exception {
         PixImage pixImage = new PixImage(3, 3);
         short color = 10;
         for (int i = 0; i < 3; i++) {

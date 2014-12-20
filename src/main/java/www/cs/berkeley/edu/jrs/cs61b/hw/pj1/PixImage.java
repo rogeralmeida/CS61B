@@ -162,6 +162,9 @@ public class PixImage {
    * @return a blurred version of "this" PixImage.
    */
   public PixImage boxBlur(int numIterations) {
+      if (numIterations < 1){
+          return this;
+      }
       PixImage pixImage = new PixImage(this.width, this.height);
       for (int i = 0; i < this.height; i++) {
           for (int j = 0; j < this.width; j++) {
