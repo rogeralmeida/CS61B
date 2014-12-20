@@ -12,14 +12,14 @@ public class PixImageTest {
 
 
     @Test
-    public void shouldCreateANewPixImage() throws Exception {
+    public void new_shouldCreateANewPixImage() throws Exception {
         PixImage pixImage = new PixImage(50, 50);
         assertThat(pixImage.getHeight(), equalTo(50));
         assertThat(pixImage.getWidth(), equalTo(50));
     }
 
     @Test
-    public void shouldInitializeWithAAllBlackImage() throws Exception {
+    public void new_shouldInitializeWithAAllBlackImage() throws Exception {
         PixImage pixImage = new PixImage(20, 20);
         assertThat(pixImage.getBlue(1, 2), equalTo((short) 0));
         assertThat(pixImage.getGreen(10, 16), equalTo((short) 0));
@@ -27,7 +27,7 @@ public class PixImageTest {
     }
 
     @Test
-    public void shouldStoreAndRetrieveRGBColors() throws Exception {
+    public void setPixel_shouldStoreAndRetrieveRGBColors() throws Exception {
         PixImage pixImage = new PixImage(1, 1);
         pixImage.setPixel(0, 0, (short) 50, (short) 100, (short) 150);
         assertThat(pixImage.getRed(0, 0), equalTo((short) 50));
