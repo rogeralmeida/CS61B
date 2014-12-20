@@ -38,13 +38,13 @@ public class PixImage {
   public PixImage(int width, int height) {
       this.width = width;
       this.height = height;
-      this.pixels = new Pixel[height][width];
+      this.pixels = new Pixel[width][height];
       initializePixels(width, height);
   }
 
     private void initializePixels(int width, int height) {
-        for (int x = 0; x < height; x++) {
-            for (int y = 0; y < width; y++) {
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
                 pixels[x][y] = new Pixel((short) 0, (short) 0, (short) 0);
             }
         }
@@ -166,8 +166,8 @@ public class PixImage {
           return this;
       }
       PixImage pixImage = new PixImage(this.width, this.height);
-      for (int i = 0; i < this.height; i++) {
-          for (int j = 0; j < this.width; j++) {
+      for (int i = 0; i < this.width; i++) {
+          for (int j = 0; j < this.height; j++) {
               Pixel pixelBlur = pixelBlur(i, j);
               pixImage.setPixel(i, j, pixelBlur.getRed(), pixelBlur.getGreen(), pixelBlur.getBlue());
           }
@@ -180,8 +180,10 @@ public class PixImage {
         int redSum = 0;
         int blueSum = 0;
         int iterations = 0;
-        for (int x = row == 0 ? row : row - 1; x <= (row == height - 1 ? row : row + 1); x++) {
-            for (int y = column  == 0 ? column : column - 1; y <= (column == width - 1 ? column : column + 1); y++) {
+        for (int x = row == 0 ? row : row - 1; x <= (row == width - 1 ? row : row + 1); x++) {
+            Integer initialY = column == 0 ? column : column - 1;
+            Integer maxY = column == height - 1 ? column : column + 1;
+            for (int y = initialY; y <= maxY; y++) {
                 greenSum += getGreen(x, y);
                 blueSum+= getBlue(x, y);
                 redSum += getRed(x, y);
